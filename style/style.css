@@ -1,0 +1,175 @@
+body {
+    background-image: url('https://img.freepik.com/free-vector/public-library-interior-stack-book-bookshelf-flat_7081-838.jpg?size=1300&ext=jpg');
+    background-color: rgba(236, 236, 236, 0.7);
+    background-blend-mode: lighten;
+}
+
+.btn {
+    width: 150px;
+    height: 45px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #5282d4;
+    background-image: -webkit-linear-gradient(top, #5282d4, #28667d);
+    background-image: -moz-linear-gradient(top, #5282d4, #28667d);
+    background-image: -ms-linear-gradient(top, #5282d4, #28667d);
+    background-image: -o-linear-gradient(top, #5282d4, #28667d);
+    background-image: linear-gradient(top, #5282d4, #28667d);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.btn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn:active {
+    color: #000;
+}
+
+.btn:active:after {
+    background: transparent;
+}
+
+.btn:hover:before {
+    opacity: 1;
+}
+
+.btn:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #5282d4;
+    background-image: -webkit-linear-gradient(top, #5282d4, #28667d);
+    background-image: -moz-linear-gradient(top, #5282d4, #28667d);
+    background-image: -ms-linear-gradient(top, #5282d4, #28667d);
+    background-image: -o-linear-gradient(top, #5282d4, #28667d);
+    background-image: linear-gradient(to bottom, #5282d4, #28667d);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.logo-img{
+    margin-left: 40px;
+    height: 50px;
+    width: 60px;
+}
+
+.space {
+    margin-top: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 9vh;
+    background-color: #343a40;
+    color: #fff;
+}
+
+
+.icons ul {
+    display: flex;
+    margin-top: 190px !important;
+  }
+  
+  .icons ul li {
+    list-style: none;
+  }
+  
+  .icons ul li a {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 35px;
+    font-size: 15px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+    margin-top: 15px;
+  }
+  
+  .icons ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: 0.5s;
+    z-index: 3;
+  }
+  
+  .icons ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  .icons ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #55acee;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  
+  .icons ul li a:hover:before {
+    top: 0;
+  }
+  
+  .icons ul li:nth-child(2) a:before {
+    background: black;
+  }
+  /* CopyRights */
+  .icons ul p {
+    position: absolute;
+    left: 40%;
+    top: 20px;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .icons ul p {
+      position: absolute;
+      left: 50%;
+      top: 20px;
+    }
+  }
+  

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 body {
     background-image: url('https://img.freepik.com/free-vector/public-library-interior-stack-book-bookshelf-flat_7081-838.jpg?size=1300&ext=jpg');
     background-color: rgba(236, 236, 236, 0.7);
     background-blend-mode: lighten;
+    font-family: 'Poppins';
 }
 
 .btn {
@@ -87,24 +90,28 @@ body {
     width: 60px;
 }
 
+.typewrite {
+  color: #000;
+}
 .space {
     margin-top: 10px;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 9vh;
-    background-color: #343a40;
-    color: #fff;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 9vh;
+  background-color: #343a40;
+  color: #fff;
 }
 
-
+/*
 .icons ul {
-    display: flex;
-    margin-top: 190px !important;
-  }
+  display: flex;
+  margin-top: 190px !important;
+}
   
   .icons ul li {
     list-style: none;
@@ -157,7 +164,7 @@ footer {
   
   .icons ul li:nth-child(2) a:before {
     background: black;
-  }
+  }*/
   /* CopyRights */
   .icons ul p {
     position: absolute;

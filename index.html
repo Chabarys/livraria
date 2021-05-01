@@ -14,6 +14,8 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="style/style.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
     <title>Livraria</title>
 </head>
 
@@ -33,19 +35,19 @@
                 </li>
             </ul>
 
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" id="searchBook" placeholder="Pesquise aqui...">
-                <button class="btn btn-dark my-2 my-sm-0" type="submit"> Pesquisar </button>
-            </form>
+            <div class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" id="searchBookInput" placeholder="Pesquise aqui...">
+                <button id="searchBookButton" class="btn btn-dark my-2 my-sm-0"> Pesquisar </button>
+            </div>
         </div>
     </nav>
     <div id="message"></div>
 
     <div class="container my-3">
-        <h1>Livraria</h1>
+        <h2>Livraria</h2>
         <h5 align="center">
             <a href="" class="typewrite" data-period="2000"
-                data-type='[ "“If you don’t like to read, you haven’t found the right book.” – J.K. Rowling", "“That’s the thing about books. They let you travel without moving your feet.” – Jhumpa Lahiri", "“There is more treasure in books than in all the pirate’s loot on Treasure Island.” – Walt Disney", "“Some of these things are true and some of them lies. But they are all good stories.” – Hilary Mantel" ]'>
+                data-type='[ "“Às vezes a leitura é um modo engenhoso de evitar o pensamento.” – A. Helps", "“A leitura é, provavelmente, uma outra maneira de estar em um lugar.” – José Saramago", "“A leitura é uma porta aberta para um mundo de descobertas sem fim.” – Sandro Costa" ]'>
                 <span class="wrap"></span>
             </a>
         </h5>
@@ -104,21 +106,23 @@
             </fieldset>
             <div class="form-group-row">
                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Adicionar livro</button>
+                    <button id="addBookButton" class="btn btn-primary">Adicionar livro</button>
                 </div>
             </div>
         </form>
         
         <div id="table">
             <hr />
-            <h1>Seus Livros</h1>
+            <h2>Seus Livros</h2>
             <hr />
-            <table class="table table-striped">
+            <table id="tableBooks" class="table table-striped">
                 <thead>
                     <tr>
+                        <th scope="col">Id</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Autor</th>
                         <th scope="col">Categoria</th>
+                        <th scope="col"></th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -131,16 +135,9 @@
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
     <script src="javascript/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
+    
 </body>
 
 </html>

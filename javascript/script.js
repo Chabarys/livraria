@@ -20,7 +20,6 @@ $(document).ready(() => {
 
 const insertBook = (nomeLivro, nomeAutor, categoria) => {
     if (!nomeLivro || !nomeLivro || !categoria) {
-        alert('Ta faltando alguma porra ae caralho!')
         return false;
     }
 
@@ -47,7 +46,6 @@ const insertBook = (nomeLivro, nomeAutor, categoria) => {
 
 const deleteBook = livro_id => {
     if (!livro_id) {
-        alert('Ta faltando alguma porra ae caralho!')
         return false;
     }
 
@@ -72,7 +70,6 @@ const deleteBook = livro_id => {
 
 const updateBook = idLivro => {
     if (!idLivro) {
-        alert('Ta faltando alguma porra ae caralho!')
         return false;
     }
 
@@ -88,10 +85,9 @@ const updateBook = idLivro => {
         success: result => {
             switch (result.status) {
                 case 0:
-                    alert("deu supimpa")
+                   
                     break;
                 case 2:
-                    alert("deu errado pra caralho")
                     break;
             }
         }
@@ -110,10 +106,9 @@ const loadBook = livro_id => {
                 case 0:
                     $('#bookName').val(`${result.data.nome}`)
                     $('#author').val(`${result.data.autor}`)
-                    //            $('#type').val(`${result.data.categoria}`)
+                    $('#type').val(`${result.data.categoria}`)
                     break;
                 case 2:
-                    alert("deu errado pra caralho")
                     break;
             }
         }
@@ -130,14 +125,13 @@ const loadAllBooks = () => {
                 case 0:
                     for (const livro of result.data) {
                         const tds = [
-                            `<td class='d-lg-block' style='text-align: center'>${livro.livro_id}</td>`,
                             `<td>${livro.nome}</td>`,
                             `<td>${livro.autor}</td>`,
                             `<td>${livro.categoria}</td>`,
                             `<td><button class="btn btn-success" id="edit" onclick="loadBook(${livro.livro_id})">Editar</button></td>`,
                             `<td><button class="btn btn-danger" id="edit" onclick="deleteBook(${livro.livro_id})">Deletar</button></td>`
                         ].join('')
-                        $('#tableBooks tbody').append(`<tr style='cursor: pointer' onclick='loadBook(${livro.livro_id})'>${tds}</tr>`)
+                        $('#tableBooks tbody').append(`<tr>${tds}</tr>`)
                     }
                     break;
                 case 2:
@@ -170,7 +164,7 @@ TxtType.prototype.tick = function () {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+    this.el.innerHTML = `<span class="wrap">${this.txt}</span>`
 
     let that = this;
     let delta = 150 - Math.random() * 100;
